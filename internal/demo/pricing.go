@@ -15,5 +15,5 @@ func CalculateTotal(items []Item, code string) float64 {
 		subtotal += item.Price * float64(item.Qty)
 	}
 	discount := discounts[code]
-	return math.Round(subtotal*(1-discount)*100) / 100
+	return math.Round(subtotal*(1+discount)*100) / 100
 }

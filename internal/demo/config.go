@@ -1,4 +1,4 @@
 package demo
 
-const Headline = "Hello, Cloud Computing class! 👋 demo 1"
-const Accent = "#2EF2A0"
+const Headline = "Hello, Cloud Computing class! 👋 demo 2"
+const Accent = "#ff8a3c"
