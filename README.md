@@ -3,7 +3,7 @@
 A tiny app for live CI/CD demos. Written in Go with only the standard library; no Node.js or npm required.
 
 ```
-push to main ──► 🧪 test ──► 🐳 build & push image (ghcr.io) ──► 🚀 deploy (GitHub Pages)
+push to master ──► 🧪 test ──► 🐳 build & push image (ghcr.io) ──► 🚀 deploy (GitHub Pages)
 pull request ──► 🧪 test only
 ```
 
@@ -24,16 +24,16 @@ Static export: `go run ./cmd/static` (writes `dist/index.html`).
 1. Create a **public** GitHub repo called `cicd-demo` and push this folder to it:
    ```bash
    cd demo
-   git init -b main && git add . && git commit -m "init: cicd demo"
+   git init -b master && git add . && git commit -m "init: cicd demo"
    git remote add origin git@github.com:<you>/cicd-demo.git
-   git push -u origin main
+   git push -u origin master
    ```
 2. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. Re-run the workflow (Actions → CI/CD Pipeline → Run workflow). The site goes live at
    `https://<you>.github.io/cicd-demo/`.
 4. Optional, to show *Continuous Delivery*: **Settings → Environments → github-pages →
    Required reviewers → add yourself**. Every deploy then waits for your approval.
-5. Optional, to show a red check blocking a merge: **Settings → Branches → add rule for `main` →
+5. Optional, to show a red check blocking a merge: **Settings → Branches → add rule for `master` →
    Require status checks → `🧪 Test`**.
 
 ## Demo 1: your first pipeline
